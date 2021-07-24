@@ -87,4 +87,4 @@ An attacker can use XSS to send a malicious script to an unsuspecting user. The 
 👤 **Acty**
 
 - Twitter: [@Acty123](https://twitter.com/Acty123)
-- Github: [@Actyy](https://github.com/Actyy)
+- Github: [@hugoforestier](https://github.com/hugoforestier)
