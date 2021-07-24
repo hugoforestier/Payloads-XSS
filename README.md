@@ -56,7 +56,8 @@ An attacker can use XSS to send a malicious script to an unsuspecting user. The 
 <div onpointerleave="alert(45)">MOVE HERE</div>
 <div onpointermove="alert(45)">MOVE HERE</div>
 <div onpointerout="alert(45)">MOVE HERE</div>
-<div onpointerup="alert(45)">MOVE HERE</div>```
+<div onpointerup="alert(45)">MOVE HERE</div>
+```
 
 ## Author
 
